@@ -1,0 +1,61 @@
+# Node.js modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# Cache
+.cache/
+.nyc_output/
+coverage/
+*.tsbuildinfo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Debug files
+debug.log*
+*.stackdump
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Git-specific files
+*.orig
+*.rej
+
+# Optional npm cache
+.npm/
+
+# Dependency directories for package managers
+/.pnp
+.pnp.js
+
+# Config for PM2 (process manager)
+pm2-log/
+pm2.pid
