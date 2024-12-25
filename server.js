@@ -18,6 +18,11 @@ app.use(express.urlencoded({ extended: true }));
 // - Middlewares
 const errorHandlerMiddleware = require("./middlewares/errorHandler");
 const notFoundMiddleware = require("./middlewares/NotFound");
+
+// - Routers
+
+
+// endpoints
 app.get("/", (req, res) => {
         res.send("Muhammed On Da Code!");
 })
