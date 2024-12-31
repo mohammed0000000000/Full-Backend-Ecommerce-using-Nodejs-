@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-mongoose.connection.on("open", ()=>{
+mongoose.connection.once("open", ()=>{
         console.log("Connected to MongoDB");
         app.listen(port,() => {
         console.log(`Server is running on port ${port}`);
