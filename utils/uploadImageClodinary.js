@@ -8,13 +8,20 @@ cloudinary.config({
 })
 
 const uploadImageClodinary = async (image) => {
-    const buffer = image?.buffer || Buffer.from(await image.arrayBuffer());
-    const uploadImage = await new Promise((resolve,reject)=>{
-        cloudinary.uploader.upload_stream({ folder : "binkeyit"},(error,uploadResult)=>{
-            return resolve(uploadResult)
-        }).end(buffer)
-    })
+    try{
+        const buffer = image?.buffer || Buffer.from(await image.arrayBuffer());
+        const uploadImage = await new Promise((resolve,reject)=>{
+            cloudinary.uploader.upload_stream({ folder : "binkeyit"},(error,uploadResult)=>{
+                return resolve(uploadResult)
+            }).end(buffer)
+        })
 
-    return uploadImage
+        return uploadImage
+    }
+    catch(error){
+        console.error("Error uploading image to cloudinary", error)
+        return error;
+    }
+
 }
 module.exports = uploadImageClodinary;
