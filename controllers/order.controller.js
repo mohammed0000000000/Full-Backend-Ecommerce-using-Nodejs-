@@ -8,6 +8,7 @@ import priceWithDiscount from "../utils/priceWithDiscount";
 import {Stripe} from "stripe";
 import CustomApiError from "../errors/CustomApiError";
 import AddressModel from "../models/Address.model";
+import CartProductModel from "../models/CartProduct.model";
 
 
 const CashOnDeliveryOrderController = async (req, res) => {
